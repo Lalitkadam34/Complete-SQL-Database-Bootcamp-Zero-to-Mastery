@@ -4,7 +4,8 @@
 * Question: What unique titles do we have?
 */
 
-SELECT * FROM titles;
+SELECT DISTINCT titles FROM titles;
+
 
 
 /*
@@ -13,7 +14,7 @@ SELECT * FROM titles;
 * Question: How many unique birth dates are there?
 */
 
-SELECT * FROM employees;
+SELECT DISTINCT birth_dates FROM employees;
 
 /*
 * DB: World
@@ -22,5 +23,5 @@ SELECT * FROM employees;
 * Make sure there are no nulls
 */
 
-SELECT * FROM country;
+SELECT coalesce (life_expect,60)as col_date DISTINCT life_expect FROM country;
 
